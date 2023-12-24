@@ -41,9 +41,7 @@ const errorMiddleware = (err, req, res, next) => {
 app.use('/blogs', authMiddleWare, blogRoute);
 app.use('/user', authRoute);
 app.use(errorMiddleware);
-
-
-mongoose.connect('mongodb://127.0.0.1:27017/Sculptify').then(()=> {
+mongoose.connect('mongodb+srv://withonick:tajimurat@cluster0.iljugf4.mongodb.net/mean_blog?retryWrites=true&w=majority').then(()=> {
     app.listen(PORT, () => {
         console.log(`Express server is running in port ${PORT}`);
     })

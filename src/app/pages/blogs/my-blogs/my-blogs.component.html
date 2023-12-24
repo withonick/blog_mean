@@ -1,7 +1,7 @@
-<div class="container my-5">  
+<div class="container my-5">
   <div *ngIf="message" class="alert alert-success">
     {{ message }}
-  </div>    
+  </div>
   <div class="row" *ngFor="let blog of blogs">
       <div class="card mt-3 border-0 bg-light rounded-3 shadow-sm">
         <div class="card-body">
@@ -30,10 +30,10 @@
           <div class="mt-4">
             <span class="text-muted">
               <i class="bi bi-chat"></i>
-              <span class="mx-1">{{ blog?.comments?.length }} comments</span>
+              <span class="mx-1">{{ blog?.comments?.length }} Комментарий</span>
             </span>
             <a class="float-end btn btn-warning" id="read-more-btn" [routerLink]="['/all-blogs/', blog._id, 'view-blog']">
-              Read More
+              Читать
             </a>
           </div>
 
@@ -45,13 +45,13 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                  Are you sure you want to delete the Blog?
+                  Вы уверены, что хотите удалить блог?
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="deleteBlog(blog._id)">Delete</button>
+                  <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Отмена</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="deleteBlog(blog._id)">Удалить</button>
                 </div>
-          
+
               </div>
             </div>
           </div>

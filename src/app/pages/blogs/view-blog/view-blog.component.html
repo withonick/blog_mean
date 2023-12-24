@@ -21,17 +21,17 @@
     <div class="border-bottom my-4 border-2"></div>
     <div class="mt-3 py-2">
         <div class="">
-            <h4>Post a Comment</h4>
+            <h4>Оставить комментарий</h4>
             <div class="">
-                <textarea type="text" placeholder="Enter your Comment Here..." [(ngModel)]="addcomment" class="border-0 rounded-3 bg-light p-3 w-100"></textarea>
+                <textarea type="text" placeholder="Введите свой комментарий здесь..." [(ngModel)]="addcomment" class="border-0 rounded-3 bg-light p-3 w-100"></textarea>
             </div>
-            <a class="btn btn-warning rounded-3 w-auto" (click)="addComment(blog?._id)">Publish</a>
+            <a class="btn btn-warning rounded-3 w-auto" (click)="addComment(blog?._id)">Отправить</a>
         </div>
     </div>
     <div class="border-bottom my-4 border-2"></div>
     <div class="mt-3">
         <a class="text-secondary border-bottom border-secondary" (click)="toggleComments(blog, $event)">
-            View All {{ blog?.comments?.length }} Comments
+            Полностью {{ blog?.comments?.length }} смотреть комментарий
         </a>
     </div>
     <div class="mt-3" *ngIf="blog?.showComments">
@@ -45,11 +45,11 @@
             </div>
             <div class="col-11">
                 <span class="fw-bold">{{ comment?.name}}</span> <br/>
-                <span class="small text-muted fst-italic">Posted at {{comment?.postedAt | date: 'short'}}</span> <br/>
+                <span class="small text-muted fst-italic">Размещено {{comment?.postedAt | date: 'short'}}</span> <br/>
                 <span>{{ comment?.comment }}</span>
             </div>
             <div class="border-bottom my-4 border-2"></div>
         </div>
-    </div>     
+    </div>
 </div>
 

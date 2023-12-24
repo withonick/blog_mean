@@ -1,4 +1,4 @@
-<div class="container my-3">      
+<div class="container my-3">
     <div class="row my-2">
       <div class="col-sm-12 col-md-6 my-4" *ngFor="let blog of blogs | paginate: { itemsPerPage: 6, currentPage: p}">
         <div class="card border-0 shadow-sm">
@@ -26,10 +26,10 @@
             <div class="mt-4">
               <span class="text-muted">
                 <i class="bi bi-chat"></i>
-                <span class="mx-1">{{ blog?.comments?.length }} comments</span>
+                <span class="mx-1">{{ blog?.comments?.length }} Комментарий</span>
               </span>
               <a class="float-end btn btn-warning" id="read-more-btn" [routerLink]="['/all-blogs/', blog._id, 'view-blog']">
-                Read More
+                Читать
               </a>
             </div>
           </div>
@@ -40,5 +40,5 @@
 </div>
 
 
- 
-  
+
+

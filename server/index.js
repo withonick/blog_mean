@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const jwt = require("jsonwebtoken");
 
-// w
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
@@ -44,7 +43,7 @@ app.use('/user', authRoute);
 app.use(errorMiddleware);
 
 
-mongoose.connect('mongodb+srv://withonick:tajimurat@cluster0.iljugf4.mongodb.net/mean_blog?retryWrites=true&w=majority').then(()=> {
+mongoose.connect('mongodb://127.0.0.1:27017/Sculptify').then(()=> {
     app.listen(PORT, () => {
         console.log(`Express server is running in port ${PORT}`);
     })

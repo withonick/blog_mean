@@ -32,14 +32,14 @@ export class MyBlogsComponent implements OnInit {
   deleteBlog(_id: string){
     this.blogService.deleteBlog(_id).subscribe(res => {
          this.blogs = this.blogs.filter((blog: { _id: string; }) => blog._id !== _id);
-         console.log('Post deleted successfully!');
+         console.log('Блог успешно удален');
          this.message = res.message;
          this.router.navigate(['/my-blogs']);
     }, (err) => {
       console.log(err);
     })
     }
-  
+
 
 }
 

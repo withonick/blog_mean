@@ -16,11 +16,11 @@ export class CreateBlogComponent implements OnInit {
   tags: String[] = [];
   title: string='';
   body: string = '';
-  
+
   error: string = '';
   message: string = '';
 
-  
+
   constructor(private blogService: BlogService, private router: Router) { }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class CreateBlogComponent implements OnInit {
   createBlog(){
     this.message = '';
     this.blogService.createBlog(this.title, this.body, this.tags ).subscribe((res:any)=> {
-      console.log('Blog Created successfully!');
+      console.log('Блог создан успешно!');
       this.message = res.message;
     }, (err) => {
       this.error = err.error.message;
@@ -57,7 +57,7 @@ export class CreateBlogComponent implements OnInit {
       translate: 'yes',
       enableToolbar: true,
       showToolbar: true,
-      placeholder: 'Enter your blog content here...',
+      placeholder: 'Введите здесь описание вашего блога...',
       defaultParagraphSeparator: '',
       defaultFontName: '',
       defaultFontSize: '',
@@ -91,6 +91,6 @@ export class CreateBlogComponent implements OnInit {
 
 }
 
-  
+
 
 

@@ -15,8 +15,8 @@ export class AllBlogsComponent implements OnInit {
   p: any;
   message: string = '';
 
-  
-  
+
+
   constructor(private blogService: BlogService, private router: Router) { }
   ngOnInit(): void {
     this.getBlogs();
@@ -32,17 +32,16 @@ export class AllBlogsComponent implements OnInit {
   userTags: String[] = [];
 
 
-  
+
   deleteBlog(_id: string){
     this.blogService.deleteBlog(_id).subscribe(res => {
-        //  this.blogs = this.blogs.filter(this.blogs => this.blogs._id !== _id);
-         console.log('Post deleted successfully!');
+         console.log('Пост успешно удален!');
          this.router.navigate(['/my-blogs']);
     }, (err) => {
       console.log(err);
     })
     }
-  
+
 }
 
 

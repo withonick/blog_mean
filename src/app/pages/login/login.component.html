@@ -9,16 +9,16 @@
                     <label for="email">Почта</label>
                     <div class="mt-2">
                         <input type="email"  class="form-control"  [ngClass]="{'error' : fg.get('email').errors}" formControlName="email">
-                        <small class="text-danger" *ngIf="fg.get('email')?.errors?.email">Please Enter a Valid Email Address</small>
-                        <p class="small mb-0 text-danger" *ngIf="fg.get('email').errors?.required && submitted">Email is Required</p>
+                        <small class="text-danger" *ngIf="fg.get('email')?.errors?.email">Пожалуйста, введите действительный адрес электронной почты</small>
+                        <p class="small mb-0 text-danger" *ngIf="fg.get('email').errors?.required && submitted">Электронная почта обязательна</p>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <label for="password">Пароль</label>
                     <div class="mt-2">
                         <input type="password" class="form-control" [ngClass]="{'error' : fg.get('password').errors}" formControlName="password">
-                        <small class="text-danger" *ngIf="fg.get('password')?.errors?.minlength">Please Enter at least 4 charecters</small>
-                        <p class="small mb-0 text-danger" *ngIf="fg.get('password').errors?.required && submitted">Password is Required</p>
+                        <small class="text-danger" *ngIf="fg.get('password')?.errors?.minlength">Пожалуйста, введите не менее 4 символов</small>
+                        <p class="small mb-0 text-danger" *ngIf="fg.get('password').errors?.required && submitted">Необходим пароль</p>
                     </div>
                 </div>
                 <div class="mt-3">
